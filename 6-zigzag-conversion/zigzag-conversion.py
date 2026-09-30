@@ -6,10 +6,10 @@ class Solution:
         
         idx , d = 0 , 1
 
-        rows = [ [] for _ in range(numRows)]
+        rows = [""] * numRows
 
         for ch in s:
-            rows[idx].append(ch)
+            rows[idx] += ch
 
             if idx == 0:
                 d = 1
@@ -17,4 +17,4 @@ class Solution:
                 d = -1
             idx += d
 
-        return "".join("".join(row) for row in rows)        
+        return "".join(rows)      
